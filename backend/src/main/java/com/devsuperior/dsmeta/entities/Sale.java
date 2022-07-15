@@ -60,4 +60,10 @@ public class Sale {
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
+	public String toFormatedString() {
+		String date = getDate().getMonthValue() + "/" + getDate().getYear();
+		return "Destaque do mês de " + date + ": Vendedor " + getSellerName() + "\n\nVenda Total de R$ " + String.format("%.2f", getAmount());
+		
+	}
+	
 }
